@@ -7,13 +7,16 @@ import ipaddress
 import dns.resolver
 import dns.reversename
 import pygeoip
+
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt 
 
-datafile='data0.parquet'
+datafile='dataset0/data0.parquet'
 
 ### IP geolocalization
-gi=pygeoip.GeoIP('./GeoIP.dat')
-gi2=pygeoip.GeoIP('./GeoIPASNum.dat')
+gi=pygeoip.GeoIP('./GeoIP_DBs/GeoIP.dat')
+gi2=pygeoip.GeoIP('./GeoIP_DBs/GeoIPASNum.dat')
 addr='193.136.73.21'
 cc=gi.country_code_by_addr(addr)
 org=gi2.org_by_addr(addr)
