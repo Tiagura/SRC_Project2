@@ -12,7 +12,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt 
 
-datafile='dataset0/data0.parquet'
+datafile='data0.parquet'
 
 ### IP geolocalization
 gi=pygeoip.GeoIP('./GeoIP_DBs/GeoIP.dat')
